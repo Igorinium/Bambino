@@ -28,7 +28,7 @@
 					<nav class="header__menu">
 						<ul class="header__list">
 							<li>
-								<a href="#hero-page fullscreen" class="header__link">Гланая</a>
+								<a href="#hero-page" class="header__link">Гланая</a>
 							</li>
 							<li>
 								<a href="#about" class="header__link">О компании</a>
@@ -60,7 +60,7 @@
 				</div>
 			</div>
 		</header>
-		<section class="hero-page fullscreen">
+		<section class="hero-page">
 			<div class="container-2">
 				<div class="hero-page__body">
 					<div class="hero-page__left">
@@ -95,12 +95,14 @@
 				<div class="about__body">
 					<div class="about__left">
 						<div class="DIY-slider">
-							<div class="DIY-slider__wrapper">
+							<div class="DIY-slider__wrapper zoom-images">
 								<div class="DIY-slider__slide">
-									<img data-src="img/about-img-1.jpg" src="img/1pixel.png" alt="Картинка">
+									<div class="zoom-btn"></div>
+									<img zoom data-src="img/about-img-1.jpg" src="img/1pixel.png" alt="Картинка">
 								</div>
-								<div class="DIY-slider__slide">
-									<img data-src="img/about-img-2.jpg" src="img/1pixel.png" alt="Картинка">
+								<div id="zoom-slide" class="DIY-slider__slide">
+									<div class="zoom-btn"></div>
+									<img zoom data-src="img/about-img-2.jpg" src="img/1pixel.png" alt="Картинка">
 								</div>
 
 								<div class="DIY-slider__heart"><img src="img/heart-bg.png" alt="Сердечко"></div>
@@ -222,31 +224,36 @@
 			<div class="slider-container">
 				<!-- Слайдер -->
 				<div class="image-slider swiper-container">
-					<div class="image-slider__wrapper swiper-wrapper">
+					<div class="image-slider__wrapper swiper-wrapper zoom-images">
 						<div class="image-slider__slide swiper-slide">
 							<div class="img-slider-btn-next"></div>
 							<div class="image-slider__image">
-								<img data-src="img/slider/1.jpg" src="img/1pixel.png" class="swiper-lazy" alt="Картинка">
+								<div class="zoom-btn"></div>
+								<img zoom data-src="img/slider/1.jpg" src="img/1pixel.png" class="swiper-lazy" alt="Картинка">
 							</div>
 						</div>
 						<div class="image-slider__slide swiper-slide">
 							<div class="image-slider__image">
-								<img data-src="img/slider/2.jpg" src="img/1pixel.png" class="swiper-lazy" alt="Картинка">
+								<div class="zoom-btn"></div>
+								<img zoom data-src="img/slider/2.jpg" src="img/1pixel.png" class="swiper-lazy" alt="Картинка">
 							</div>
 						</div>
 						<div class="image-slider__slide swiper-slide">
 							<div class="image-slider__image">
-								<img data-src="img/slider/3.jpg" src="img/1pixel.png" class="swiper-lazy" alt="Картинка">
+								<div class="zoom-btn"></div>
+								<img zoom data-src="img/slider/3.jpg" src="img/1pixel.png" class="swiper-lazy" alt="Картинка">
 							</div>
 						</div>
 						<div class="image-slider__slide swiper-slide">
 							<div class="image-slider__image">
-								<img data-src="img/slider/4.jpg" src="img/1pixel.png" class="swiper-lazy" alt="Картинка">
+								<div class="zoom-btn"></div>
+								<img zoom data-src="img/slider/4.jpg" src="img/1pixel.png" class="swiper-lazy" alt="Картинка">
 							</div>
 						</div>
 						<div class="image-slider__slide swiper-slide">
 							<div class="image-slider__image">
-								<img data-src="img/slider/5.jpg" src="img/1pixel.png" class="swiper-lazy" alt="Картинка">
+								<div class="zoom-btn"></div>
+								<img zoom data-src="img/slider/5.jpg" src="img/1pixel.png" class="swiper-lazy" alt="Картинка">
 							</div>
 						</div>
 
@@ -532,6 +539,33 @@
 		</footer>
 		<div class="wrapper-bg-2">
 			<img src="img/bg2.png" alt="Фон">
+		</div>
+		<div class="popup-pics">
+			<div class="popup-pics__close">
+				<svg fill="white" viewBox="0 0 16 16" class="YdoIcon-Svg YdoIcon-Svg_size_m YdoIcon-Svg_color_white">
+					<path fill-rule="evenodd"
+						d="M2.293 2.293a1 1 0 011.414 0l10 10a1 1 0 01-1.414 1.414l-10-10a1 1 0 010-1.414z"
+						clip-rule="evenodd"></path>
+					<path fill-rule="evenodd"
+						d="M13.707 2.293a1 1 0 00-1.414 0l-10 10a1 1 0 101.414 1.414l10-10a1 1 0 000-1.414z"
+						clip-rule="evenodd"></path>
+				</svg>
+			</div>
+			<div class="popup-pics__wrapper">
+				<div class="popup-slider swiper-container">
+					<div class="popup-slider__wrapper swiper-wrapper">
+
+					</div>
+				</div>
+				<div class="popup-slider-btn-prev">
+					<div class="popup-slider-btn slider-btn slider-btn__wrapper-prev"><img src="img/svg/arrow-right.svg"
+							alt="Стерлка"></div>
+				</div>
+				<div class="popup-slider-btn-next">
+					<div class="popup-slider-btn slider-btn__wrapper-next"><img src="img/svg/arrow-right.svg" alt="Стрелка">
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- Слайдер -->

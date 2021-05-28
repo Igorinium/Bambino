@@ -26,15 +26,12 @@ const posBlocks = () => {
 			if (posCenter >= posY && posCenter <= posEnd) {
 				link.addClass('active');
 				$('.header__list a').not($('.header__list a').eq(i)).removeClass('active');
-				pointTransfer(link);
 				break;
 			}
 		}
 	}
 }
-const pointTransfer = (link) => {
-	console.log(link.width() / 2);
-}
+
 window.addEventListener('scroll', lazyScroll);
 function lazyScroll() {
 	posBlocks();
@@ -140,8 +137,6 @@ $(document).ready(function () {
 		slidesPerView: 3,
 		spaceBetween: 40,
 		loop: true,
-		initialSlide: 1,
-		loopedSlides: 0,
 		preloadImages: false,
 		// Lazy Loading
 		// (подгрузка картинок)
@@ -179,3 +174,38 @@ $(document).ready(function () {
 	});
 
 });
+
+//увеличение картинок 
+$('.zoom-btn').click(function () {
+	$('.popup-slider__wrapper').empty();
+	$('body').addClass('lock');
+	$('.popup-pics').addClass('active');
+	$('.img-scaling').empty();
+	let imgActive = $(this).siblings('img[zoom]').attr('src');
+	let images = $(this).closest('.zoom-images').find('img[zoom]');
+	let activeNum = 0;
+	for (let i = 0; i < images.length; i++) {
+		let src = images.eq(i).attr('src');
+		$('.popup-slider__wrapper').append(`<div class="popup-slider__slide swiper-slide">
+			<img src="${src}" class="popup-slider__image">
+		</div>`);
+		if (src == imgActive) { activeNum = i }
+	}
+	let myPopupSlider = new Swiper('.popup-slider', {
+		// Стрелки
+		navigation: {
+			nextEl: '.popup-slider-btn-next',
+			prevEl: '.popup-slider-btn-prev'
+		},
+		observeSlideChildren: true,
+		slidesPerView: 1,
+		observer: true,
+		initialSlide: Number(activeNum),
+	});
+});
+$('.popup-pics__close').click(function () {
+	$('body').removeClass('lock');
+	$('.popup-pics').removeClass('active');
+	$('.popup-slider__wrapper').empty();
+});
+//увеличение картинок
