@@ -11,9 +11,12 @@
 	<meta name="viewport" content="width=device-width, initial scale=1.0, maximum scale=1.0, user-scalable=0" />
 	<!-- Слайдер -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
 	<link rel="stylesheet" href="css/scss.css">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
 </head>
 
 <body>
@@ -104,7 +107,10 @@
 									<div class="zoom-btn"></div>
 									<img zoom data-src="img/about-img-2.jpg" src="img/1pixel.png" alt="Картинка">
 								</div>
-
+								<div id="zoom-slide" class="DIY-slider__slide">
+									<div class="zoom-btn"></div>
+									<img zoom data-src="img/catering-2.jpg" src="img/1pixel.png" alt="Картинка">
+								</div>
 								<div class="DIY-slider__heart"><img src="img/heart-bg.png" alt="Сердечко"></div>
 								<div class="DIY-slider__circle"></div>
 								<div class="DIY-slider-btn-next"></div>
@@ -113,8 +119,9 @@
 					</div>
 					<div class="about__right">
 						<div class="about__text">
-							<p class="over-text">О нас</p>
-							<h2 class="about__title s-title">Кто мы <br> и чем занимаемся ?</h2>
+							<p class="over-text animate__animated wow animate__fadeInLeft">О нас</p>
+							<h2 class="about__title s-title animate__animated wow animate__fadeInRight">Кто мы <br> и чем
+								занимаемся ?</h2>
 							<p class="about__description regular">
 								Мы занимаемся производством и реализацией вкуснейшего итальянского мороженого. Нас любят за
 								свежее
@@ -135,8 +142,8 @@
 			</div>
 			<div class="container">
 				<div class="franchise__body">
-					<p class="over-text">Сотрудничество</p>
-					<h2 class="franchise__title s-title">Франшиза</h2>
+					<p class="over-text animate__animated wow animate__fadeInRight">Сотрудничество</p>
+					<h2 class="franchise__title s-title animate__animated wow animate__fadeInLeft">Франшиза</h2>
 					<p class="franchise__description regular">Сеть франшиз Bambino, это Бизнес - успешно работающий в 3
 						странах (Казахстан, Россия, Кыргызстан) </p>
 					<p class="franchise__pink-text">Для работы с нами необходимо:</p>
@@ -216,7 +223,7 @@
 		<section class="gallery">
 			<div class="container">
 				<div class="gallery__body">
-					<h2 class="gallery__title s-title">Галерея</h2>
+					<h2 class="gallery__title s-title animate__animated wow animate__fadeInRight">Галерея</h2>
 					<p class="gallery__subtitle regular">Для наших любимых и дорогих заказчиков, мы предусмотрели все
 						варианты доставки, с самыми лучшими условиями.</p>
 				</div>
@@ -267,7 +274,7 @@
 					<div class="dealership__bg-1"></div>
 					<div class="dealership__bg-2"></div>
 					<div class="dealership__left">
-						<h2 class="dealership__title s-title">
+						<h2 class="dealership__title s-title animate__animated wow animate__fadeInLeft">
 							Дилерство
 						</h2>
 						<div class="dealership__text regular">
@@ -312,7 +319,7 @@
 						</div>
 					</div>
 					<div class="catering__right">
-						<h2 class="catering__title s-title">Кайтеринг</h2>
+						<h2 class="catering__title s-title animate__animated wow animate__fadeInRight">Кайтеринг</h2>
 						<p class="catering__text regular">Предлагаем вам, украсить ваш праздник рикшей с мороженым. Вашим
 							гостям, как взрослым, так и детям придутся по вкусу легкие освежающие десерты в виде мороженого. Мы
 							приготовили для Вас несколько пакетов, в зависимости от количества гостей. Помимо свадеб, мы
@@ -334,7 +341,7 @@
 				<div class="container">
 					<div class="production__head">
 						<div class="production__left">
-							<h2 class="production__title s-title">Наша продукция</h2>
+							<h2 class="production__title s-title animate__animated wow animate__fadeInLeft">Наша продукция</h2>
 						</div>
 						<div class="production__right">
 							<p class="production__text regular">
@@ -441,7 +448,7 @@
 						</div>
 					</div>
 					<div class="delivery__right">
-						<h2 class="delivery__title s-title">
+						<h2 class="delivery__title s-title animate__animated wow animate__fadeInRight">
 							Доставка
 						</h2>
 						<p class="delivery__text regular">Для наших любимых и дорогих заказчиков, мы предусмотрели

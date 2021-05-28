@@ -2978,8 +2978,8 @@ body .lock {
   display: flex;
   overflow: hidden;
   cursor: pointer;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   max-width: 482px;
 }
 
